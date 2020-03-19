@@ -170,16 +170,15 @@ a {
 }
 
 .bestsellers {
+  display: grid;
   width: 100%;
   min-height: 76.4rem;
 }
 
 .bestsellers__container {
-  display: flex;
-  flex-direction: column;
+  width: 85%;
+  display: grid;
   margin: 0 auto;
-  position: relative;
-  width: 90%;
 }
 .bestsellers__container .bestsellers__title {
   position: relative;
@@ -211,10 +210,10 @@ a {
   margin: 0 auto;
 }
 .bestsellers__container .bestsellers__items {
-  position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  margin-top: 6.3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 2.5rem;
   margin-top: 12.1rem;
 }
 .bestsellers__container .bestsellers__items h6 {
@@ -235,10 +234,160 @@ a {
   margin-top: 12.8rem;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .bestsellers__container .bestsellers__fall .bestsellers__fall_title {
   position: relative;
-  width: 470px;
-  height: 370px;
-  background: url("img/bestsellers/diag3.jpg") center no-repeat;
+  min-width: 47rem;
+  height: 37rem;
+  background: url("../img/bestsellers/diag3.jpg") center no-repeat;
+  background-size: cover;
+  display: flex;
+}
+.bestsellers__container .bestsellers__fall .bestsellers__fall_title .title {
+  position: relative;
+  width: 40rem;
+  height: 30.8rem;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-self: center;
+  width: 400px;
+  height: 308px;
+  background-color: #f1f2f4;
+}
+.bestsellers__container .bestsellers__fall .bestsellers__fall_title .title .title_pos {
+  margin-left: 7rem;
+}
+.bestsellers__container .bestsellers__fall .bestsellers__fall_title .title .fall__btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin-top: 4.9rem;
+  width: 200px;
+  height: 64px;
+  background-color: #151c22;
+}
+.bestsellers__container .bestsellers__fall .bestsellers__fall_title .title .fall__btn a {
+  color: #ffffff;
+  align-self: center;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 700;
+}
+.bestsellers__container .bestsellers__fall .bestsellers__fall_title .title h6 {
+  margin-top: 6.5rem;
+  color: #727a82;
+  font-family: "Work Sans";
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+.bestsellers__container .bestsellers__fall .bestsellers__fall_title .title h3 {
+  margin-top: 1.1rem;
+  color: #151c22;
+  font-family: "Work Sans";
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.category {
+  display: grid;
+  width: 100%;
+  margin-top: 12.1rem;
+}
+.category .category__title {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.category .category__container {
+  width: 85%;
+  display: grid;
+  margin: 0 auto;
+}
+.category .category__container h3 {
+  color: #151c22;
+  font-family: "Work Sans";
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+.category .category__container p {
+  display: inline;
+  cursor: pointer;
+  color: #151c22;
+  font-family: "Work Sans";
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.category .category__container p:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  border: 1.5px solid #151c22;
+  margin: 0 auto;
+}
+.category .category__container .category__items {
+  margin-top: 6.3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 2.5rem;
+}
+.category .category__container .category__items h6 {
+  color: #151c22;
+  font-family: "Work Sans";
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+
+.footer {
+  margin-top: 10.3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #151c22;
+  height: 22.2rem;
+  color: #fff;
+}
+.footer h3 {
+  margin-top: 4.4rem;
+  font-family: "Work Sans";
+  font-size: 24px;
+  font-weight: 800;
+}
+.footer ul {
+  font-family: "Work Sans";
+  font-size: 18px;
+  font-weight: 500;
+  list-style: none;
+  display: flex;
+  margin-top: 3rem;
+}
+.footer ul li {
+  margin: 0 3.5rem;
+}
+.footer .footer_social-media {
+  margin-top: 3.5rem !important;
+  font-size: 2rem;
+  display: flex;
+}
+.footer .footer_social-media .fab {
+  cursor: pointer;
+  margin: 0 2.8rem;
+  transition: all 600ms;
+}
+.footer .footer_social-media .fa-facebook-f:hover {
+  color: #3613d3;
+}
+.footer .footer_social-media .fa-instagram:hover {
+  color: #e27bd4;
+}
+.footer .footer_social-media .fa-pinterest:hover {
+  color: #ee0d0d;
+}
+.footer .footer_social-media .fa-twitter:hover {
+  color: #3584eb;
 }
