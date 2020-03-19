@@ -23,7 +23,7 @@ a {
 
 
 //Pre header
-@media screen and(min-width: 1365px){
+// @media screen and(min-width: 1365px){
 
     .pre-header {
         width: 100%;
@@ -58,9 +58,10 @@ a {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
+        justify-content: space-between;
         margin: 0 auto;
         position: relative;
-        width: 85%;
+        width: 90%;
     }
 
 
@@ -105,6 +106,22 @@ a {
     .header__image {
         margin-left: 42%;
         margin-top: 4%;
+        .image {
+            position: relative;
+            z-index: 10;
+        }
+        .diag1 {
+            z-index: 1;
+            padding-bottom: 3rem;
+            background: transparent;
+            position: absolute;
+        }
+        .diag2 {
+            z-index: 1;
+            margin-bottom: 10rem;
+            background: transparent;
+            position: absolute;
+        }
     }
 
     .header__right {
@@ -114,7 +131,7 @@ a {
         
     }
 
-    .header__icons {
+    .header__icons {    
         display: flex;
         flex-direction: column;
         font-family: 'Work Sans';
@@ -124,9 +141,14 @@ a {
     }
 
     .fa-shopping-cart {
+        cursor: pointer;
         display: flex;
         flex-direction: column;
         margin-bottom: 3.3rem;
+    }
+
+    .fas.fa-search {
+        cursor: pointer;
     }
 
     .header__social-media {
@@ -137,5 +159,135 @@ a {
         font-size: 14px;
         font-weight: 500;
         // justify-self: right;
+        p:first-child {
+            transition: all 500ms;
+        }
+        p:first-child:hover {
+            color: rgb(54, 19, 211)
+        }
+        p:last-child {
+            transition: all 500ms;
+        }
+        p:last-child:hover {
+            color: #e27bd4;
+        }
     }
-}
+
+    .header__button {
+        position: absolute !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 219px;
+        height: 64px;
+        background-color: #151c22;
+        position: relative;
+        color: #ffffff;
+        font-family: "Work Sans";
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 38.4rem;
+        margin-left: 14.1rem;
+    }
+// }
+
+    // BESTSELLERS SECTION
+
+    .bestsellers {
+        width: 100%;
+        min-height: 76.4rem;
+    }
+
+    .bestsellers__container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        position: relative;
+        width: 90%;
+        .bestsellers__title {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 12.1rem;
+            h3 {
+                color: #151c22;
+                font-family: 'Work Sans';
+                font-size: 3.2rem;
+                font-weight: 700;
+            }
+            p {
+                display: inline;
+                cursor: pointer;
+                color: #151c22;
+                font-family: 'Work Sans';
+                font-size: 1.8rem;
+                font-weight: 500;
+                &:after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 1.5px;
+                    border: 1.5px solid #151c22;
+                    margin: 0 auto;
+                }
+            }
+        }
+        .bestsellers__items {
+            position: relative;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin-top: 12.1rem;
+            // grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            // gap: 3rem;
+            h6 {
+                margin-top: 2rem;
+                color: #151c22;
+                font-family: "Work Sans";
+                font-size: 18px;
+                font-weight: 500;
+            }
+            p {
+                margin: 1rem 0;
+                color: #151c22;
+                font-family: "Work Sans";
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+
+        .bestsellers__item1 {
+        }
+
+        .bestsellers__item2 {
+
+            // margin-left: 4.72rem;
+        }
+
+        .bestsellers__item3 {
+
+            // margin-left: 4.72rem;
+
+        }
+
+        .bestsellers__item4 {
+            // margin-left: 4.72rem;
+
+        }
+
+        .bestsellers__fall {
+            margin-top: 12.8rem;
+            display: flex;
+            flex-direction: row;
+            .bestsellers__fall_title {
+                position: relative;
+                width: 470px;
+                height: 370px;
+                background: url('img/bestsellers/diag3.jpg') center no-repeat;
+            }
+
+        }
+    }
+// }
+// 

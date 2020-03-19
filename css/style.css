@@ -15,107 +15,230 @@ a {
   text-decoration: none;
 }
 
-@media screen and (min-width: 1365px) {
-  .pre-header {
-    width: 100%;
-    height: 6.7rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.pre-header {
+  width: 100%;
+  height: 6.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .pre-header h3 {
-    color: #151c22;
-    font-family: "Work Sans", sans-serif;
-    font-size: 2.4rem;
-    font-weight: 800;
-    text-align: center;
-  }
+.pre-header h3 {
+  color: #151c22;
+  font-family: "Work Sans", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-align: center;
+}
 
-  .header {
-    max-width: 100%;
-    min-height: 61.7rem;
-    background-color: #f1f2f4;
-  }
+.header {
+  max-width: 100%;
+  min-height: 61.7rem;
+  background-color: #f1f2f4;
+}
 
-  .header__container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: 0 auto;
-    position: relative;
-    width: 85%;
-  }
+.header__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  position: relative;
+  width: 90%;
+}
 
-  .nav-list {
-    margin-top: 4.5rem;
-    justify-self: left;
-  }
-  .nav-list ul {
-    list-style: none;
-    font-family: "Work Sans";
-    font-size: 16px;
-    font-weight: 500;
-  }
-  .nav-list ul li {
-    margin-bottom: 2.9rem;
-  }
-  .nav-list ul a {
-    color: #151c22;
-  }
+.nav-list {
+  margin-top: 4.5rem;
+  justify-self: left;
+}
+.nav-list ul {
+  list-style: none;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 500;
+}
+.nav-list ul li {
+  margin-bottom: 2.9rem;
+}
+.nav-list ul a {
+  color: #151c22;
+}
 
-  .header__title {
-    position: absolute;
-    margin-top: 18.7rem;
-    margin-left: 13.5rem;
-  }
-  .header__title h1 {
-    color: #151c22;
-    font-family: "Anton";
-    font-size: 12.8rem;
-    font-weight: 400;
-    text-transform: uppercase;
-  }
-  .header__title h6 {
-    justify-self: left;
-    font-size: 1.8rem;
-    font-family: "Work Sans";
-    opacity: 0.4;
-    font-weight: 400;
-  }
+.header__title {
+  position: absolute;
+  margin-top: 18.7rem;
+  margin-left: 13.5rem;
+}
+.header__title h1 {
+  color: #151c22;
+  font-family: "Anton";
+  font-size: 12.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.header__title h6 {
+  justify-self: left;
+  font-size: 1.8rem;
+  font-family: "Work Sans";
+  opacity: 0.4;
+  font-weight: 400;
+}
 
-  .header__image {
-    margin-left: 42%;
-    margin-top: 4%;
-  }
+.header__image {
+  margin-left: 42%;
+  margin-top: 4%;
+}
+.header__image .image {
+  position: relative;
+  z-index: 10;
+}
+.header__image .diag1 {
+  z-index: 1;
+  padding-bottom: 3rem;
+  background: transparent;
+  position: absolute;
+}
+.header__image .diag2 {
+  z-index: 1;
+  margin-bottom: 10rem;
+  background: transparent;
+  position: absolute;
+}
 
-  .header__right {
-    margin-top: 4.9rem;
-    margin-left: 10.9rem;
-    justify-self: right;
-  }
+.header__right {
+  margin-top: 4.9rem;
+  margin-left: 10.9rem;
+  justify-self: right;
+}
 
-  .header__icons {
-    display: flex;
-    flex-direction: column;
-    font-family: "Work Sans";
-    font-weight: 300;
-    color: #151c22;
-    font-size: 2.5rem;
-  }
+.header__icons {
+  display: flex;
+  flex-direction: column;
+  font-family: "Work Sans";
+  font-weight: 300;
+  color: #151c22;
+  font-size: 2.5rem;
+}
 
-  .fa-shopping-cart {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 3.3rem;
-  }
+.fa-shopping-cart {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.3rem;
+}
 
-  .header__social-media {
-    margin-top: 38.6rem;
-    position: relative;
-    color: #151c22;
-    font-family: "Work Sans";
-    font-size: 14px;
-    font-weight: 500;
-  }
+.fas.fa-search {
+  cursor: pointer;
+}
+
+.header__social-media {
+  margin-top: 38.6rem;
+  position: relative;
+  color: #151c22;
+  font-family: "Work Sans";
+  font-size: 14px;
+  font-weight: 500;
+}
+.header__social-media p:first-child {
+  transition: all 500ms;
+}
+.header__social-media p:first-child:hover {
+  color: #3613d3;
+}
+.header__social-media p:last-child {
+  transition: all 500ms;
+}
+.header__social-media p:last-child:hover {
+  color: #e27bd4;
+}
+
+.header__button {
+  position: absolute !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 219px;
+  height: 64px;
+  background-color: #151c22;
+  position: relative;
+  color: #ffffff;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 38.4rem;
+  margin-left: 14.1rem;
+}
+
+.bestsellers {
+  width: 100%;
+  min-height: 76.4rem;
+}
+
+.bestsellers__container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  position: relative;
+  width: 90%;
+}
+.bestsellers__container .bestsellers__title {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 12.1rem;
+}
+.bestsellers__container .bestsellers__title h3 {
+  color: #151c22;
+  font-family: "Work Sans";
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+.bestsellers__container .bestsellers__title p {
+  display: inline;
+  cursor: pointer;
+  color: #151c22;
+  font-family: "Work Sans";
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.bestsellers__container .bestsellers__title p:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  border: 1.5px solid #151c22;
+  margin: 0 auto;
+}
+.bestsellers__container .bestsellers__items {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 12.1rem;
+}
+.bestsellers__container .bestsellers__items h6 {
+  margin-top: 2rem;
+  color: #151c22;
+  font-family: "Work Sans";
+  font-size: 18px;
+  font-weight: 500;
+}
+.bestsellers__container .bestsellers__items p {
+  margin: 1rem 0;
+  color: #151c22;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-weight: 700;
+}
+.bestsellers__container .bestsellers__fall {
+  margin-top: 12.8rem;
+  display: flex;
+  flex-direction: row;
+}
+.bestsellers__container .bestsellers__fall .bestsellers__fall_title {
+  position: relative;
+  width: 470px;
+  height: 370px;
+  background: url("img/bestsellers/diag3.jpg") center no-repeat;
 }
