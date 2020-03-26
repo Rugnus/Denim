@@ -231,6 +231,7 @@ a {
   font-weight: 700;
 }
 .bestsellers__container .bestsellers__fall {
+  max-width: 117rem;
   margin-top: 12.8rem;
   display: flex;
   flex-direction: row;
@@ -238,7 +239,7 @@ a {
 }
 .bestsellers__container .bestsellers__fall .bestsellers__fall_title {
   position: relative;
-  min-width: 47rem;
+  max-width: 47rem;
   height: 37rem;
   background: url("../img/bestsellers/diag3.jpg") center no-repeat;
   background-size: cover;
@@ -257,7 +258,7 @@ a {
   background-color: #f1f2f4;
 }
 .bestsellers__container .bestsellers__fall .bestsellers__fall_title .title .title_pos {
-  margin-left: 7rem;
+  margin: 0 auto;
 }
 .bestsellers__container .bestsellers__fall .bestsellers__fall_title .title .fall__btn {
   cursor: pointer;
@@ -390,4 +391,27 @@ a {
 }
 .footer .footer_social-media .fa-twitter:hover {
   color: #3584eb;
+}
+
+.fallimg1 {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .bestsellers__fall_title {
+    width: 100%;
+    background: url("../img/bestsellers/diag768.jpg") center !important;
+    display: flex;
+  }
+  .bestsellers__fall_title .title__pos {
+    width: 30rem !important;
+  }
+
+  .fallimg {
+    display: none !important;
+  }
+
+  .fallimg1 {
+    display: block !important;
+  }
 }

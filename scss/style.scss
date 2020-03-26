@@ -264,18 +264,21 @@ a {
         
 
         .bestsellers__fall {
+            max-width: 117rem;
             margin-top: 12.8rem;
             display: flex;
             flex-direction: row;
             align-items: center;
             .bestsellers__fall_title {
                 position: relative;
-                min-width: 47rem;
+                max-width: 47rem;
                 height: 37rem;
                 background: url('../img/bestsellers/diag3.jpg') center no-repeat;
                 background-size: cover;
                 display: flex;
+                // justify-content: center;
                 .title {
+                    // margin: 0 auto;
                     position: relative;
                     width: 40rem;
                     height: 30.8rem;
@@ -283,7 +286,7 @@ a {
                     flex-direction: column;
                     align-self: center;
                     .title_pos {
-                        margin-left: 7rem;
+                        margin: 0 auto;
                     }
                     .fall__btn {
                         cursor: pointer;
@@ -430,3 +433,28 @@ a {
     }
 // }
 // 
+.fallimg1 {
+    display: none;
+}
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 1024px) {
+    // FALL SECT
+    .bestsellers__fall_title {
+        width: 100%;
+        background: url('../img/bestsellers/diag768.jpg') center !important;
+        // background-size: cover;
+        display: flex;
+        .title__pos {
+            width: 30rem !important;
+        }
+    }
+
+    .fallimg {
+        display: none !important;
+    }
+    .fallimg1 {
+        display: block !important;
+    }
+}
