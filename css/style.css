@@ -157,8 +157,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 219px;
-  height: 64px;
+  width: 21.9rem;
+  height: 6.4rem;
   background-color: #151c22;
   position: relative;
   color: #ffffff;
@@ -397,7 +397,50 @@ a {
   display: none;
 }
 
-@media screen and (max-width: 1024px) {
+.main_image_768 {
+  display: none;
+}
+
+@media screen and (max-width: 1365px) {
+  .header__title {
+    position: absolute;
+    margin-top: 18.7rem;
+    margin-left: 13.5rem;
+  }
+  .header__title h1 {
+    color: #151c22;
+    font-family: "Anton";
+    font-size: 8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .header__title h6 {
+    justify-self: left;
+    font-size: 1.5rem;
+    font-family: "Work Sans";
+    opacity: 0.4;
+    font-weight: 400;
+  }
+
+  .header__button {
+    margin-top: 35rem;
+  }
+
+  .nav-list ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .main_image_1366 {
+    display: none;
+  }
+
+  .main_image_768 {
+    display: block;
+    margin-top: 8.3rem;
+  }
+
   .bestsellers__fall_title {
     width: 100%;
     background: url("../img/bestsellers/diag768.jpg") center !important;
