@@ -15,7 +15,9 @@
 
     <div class="header">
         <div class="container">
-
+            <div class="header__hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
             <div class="menu">
                 <ul>
                     <li><a href="#">Woman</a></li>
@@ -38,13 +40,40 @@
             <div class="item__left"><i class="fas fa-chevron-left"></i></div>
             <div class="item__photo">
                 <div class="item__main_photo">
-                    <img src="../img/card/variants/main.jpg" alt="">
+                    <picture>
+                        <source srcset="../img/card/variants/main.jpg" type="image/jpg" media="(min-width: 1366px)">
+                        <source srcset="../img/card/768/main/1.jpg" type="image/jpg" media="(min-width: 768px)">
+                        <source srcset="../img/card/320/main/1.jpg" type="image/jpg" media="(min-width: 320px)">
+                        <img src="../img/card/variants/main.jpg" alt="" class="item1">
+                    </picture>
                 </div>
                 <div class="item__secondary_photos">
-                    <img src="../img/card/variants/1.jpg" alt="">
-                    <img src="../img/card/variants/2.jpg" alt="">
-                    <img src="../img/card/variants/3.jpg" alt="">
-                    <img src="../img/card/variants/4.jpg" alt="">
+                        <picture>
+                            <source srcset="../img/card/variants/1.jpg" type="image/jpg" media="(min-width: 1366px)">
+                            <source srcset="../img/card/768/main/2.jpg" type="image/jpg" media="(min-width: 768px)">
+                            <source srcset="../img/card/320/main/2.jpg" type="image/jpg" media="(min-width: 320px)">
+                            <img src="../img/card/variants/2.jpg" alt="">
+                        </picture>
+                        <picture>
+                            <source srcset="../img/card/variants/2.jpg" type="image/jpg" media="(min-width: 1366px)">
+                            <source srcset="../img/card/768/main/3.jpg" type="image/jpg" media="(min-width: 768px)">
+                            <source srcset="../img/card/320/main/3.jpg" type="image/jpg" media="(min-width: 320px)">
+                            <img src="../img/card/variants/3.jpg" alt="">
+                        </picture>
+                        <picture>
+                            <source srcset="../img/card/variants/3.jpg" type="image/jpg" media="(min-width: 1366px)">
+                            <source srcset="../img/card/768/main/4.jpg" type="image/jpg" media="(min-width: 768px)">
+                            <source srcset="../img/card/320/main/4.jpg" type="image/jpg" media="(min-width: 320px)">
+                            <img src="../img/card/variants/4.jpg" alt="">
+                        </picture>  
+                        <picture>
+                            <source srcset="../img/card/variants/4.jpg" type="image/jpg" media="(min-width: 1366px)">
+                            <source srcset="../img/card/768/main/5.jpg" type="image/jpg" media="(min-width: 768px)">
+                            <source srcset="../img/card/320/main/5.jpg" type="image/jpg" media="(min-width: 320px)">
+                            <img src="../img/card/variants/5.jpg" alt="">
+                        </picture>  
+
+                    
                 </div>
                 
             </div>
@@ -130,18 +159,27 @@
 
 
     <div class="footer">
-        <div class="footer__title">
-            <h3>Nîmes</h3>
+        <div class="footer__main-info">
+            <div class="footer__title">
+                <h3>Nîmes</h3>
+            </div>
+            <div class="footer_info1 footer_info_item">Shop</div>
+            <div class="footer_info2 footer_info_item">Delivery</div>
+            <div class="footer_info3 footer_info_item">Service</div>
+            <div class="footer_info4 footer_info_item">Sitemap</div>
+            <div class="footer_info5 footer_info_item">Contacts</div>
+
         </div>
-        <div class="footer__menu">
-            <ul>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Delivery</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">Sitemap</a></li>
-                <li><a href="#">Contacts</a></li>
-            </ul>
-        </div>
+            <div class="footer__menu">
+                <ul>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </div>
+        
         <div class="footer_social-media">
             <i class="fab fa-facebook-f"></i>
             <i class="fab fa-instagram"></i>
