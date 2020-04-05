@@ -22,6 +22,25 @@ ul {
   list-style: none;
 }
 
+.products__navigation-chain {
+  display: none;
+}
+
+.header__hamburger {
+  display: none;
+}
+
+.footer_info_item {
+  font-family: "Work Sans";
+  font-size: 18px;
+  font-weight: 500;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  display: none;
+}
+
 @media screen and (max-width: 1366px) {
   .header .container h3 {
     margin-right: 10rem;
@@ -287,7 +306,10 @@ ul {
   flex-direction: column;
   align-items: center;
   background-color: #151c22;
-  height: 22.2rem;
+  min-height: 22.2rem;
+  color: #fff;
+}
+.footer a {
   color: #fff;
 }
 .footer h3 {
@@ -302,6 +324,7 @@ ul {
   font-weight: 500;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   margin-top: 3rem;
 }
 .footer ul li {
@@ -366,5 +389,70 @@ ul {
   }
   .goods .pages {
     margin: 6rem auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__hamburger {
+    display: block;
+    font-size: 1.8rem;
+  }
+
+  .header ul {
+    display: none;
+  }
+  .header .container h3 {
+    margin-right: 3rem;
+  }
+  .header .header__icons {
+    font-size: 2rem;
+  }
+  .header .header__icons .fa-search {
+    margin-right: 3.3rem;
+  }
+
+  .main {
+    display: none;
+  }
+
+  .products .products__container .products__navigation-chain {
+    display: block;
+  }
+  .products .products__container .products__navigation-chain .navigation {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    color: #151c22;
+    font-family: "Work Sans";
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .products .products__container .products__navigation-chain .navigation span {
+    opacity: 0.65;
+  }
+  .products .goods {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-areas: "1  2  3 " "3  9  9 " "4  9  9 " "5  6  7 " !important;
+  }
+}
+@media screen and (max-width: 680px) {
+  .footer .footer_info1 {
+    padding-top: 2rem;
+  }
+  .footer .footer_info_item {
+    display: block;
+    margin-left: 1.5rem;
+  }
+  .footer .footer__menu {
+    display: none;
+  }
+  .footer .footer__main-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+  }
+  .footer h3 {
+    margin-left: 1.5rem;
   }
 }
