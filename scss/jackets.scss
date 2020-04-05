@@ -6,6 +6,11 @@
     padding:0;
 }
 
+
+body {
+    max-width: 100%;
+}
+
 html {
     font-size: 10px;
 }
@@ -161,12 +166,15 @@ ul {
 .products {
     max-width: 100%;
     display: flex;
-    
+    min-height: 140rem;
+    min-height: 140rem;
 }
 
 .products__container {
-        width: 90%;
+        position: relative;
+        max-width: 90%;
         margin: 0 auto;
+        min-height: 140rem;
         display: flex;
         // justify-content: center;
         flex-direction: column;
@@ -192,9 +200,21 @@ ul {
     }
 
     .goods {
+        position: relative;
+        max-width: 100%;
         margin-top: 4rem;
+        display: grid;
+        grid-auto-flow: dense;
+        grid-template-columns: repeat(4, minmax(27.3rem,1fr));
+        grid-gap: 4rem;
         // display: flex;
         // justify-content: space-between;
+        .col-sp {
+            grid-column: span 2/auto;
+        }
+        .row-sp {
+            grid-row: span 2/auto;
+        }
         span {
             margin-top: 2.5rem;
             display: flex;
@@ -206,32 +226,77 @@ ul {
         display: grid;
 
         // justify-content: space-between;
-        grid-template-columns: repeat(auto-fit, minmax(24.3rem, 1fr));
+        // grid-template-columns: repeat(auto-fit, minmax(24.3rem, 1fr));
 
     }
 
+
+
     .products__second-row {
-        margin-top: 6.6rem;
-        max-height: 40rem;
-        // display: flex;
-        // flex-direction: row;
-        // justify-content: space-between;
-        display: grid;
-        // margin-left: 2.5rem;
-        justify-content: space-around;
-        grid-template-columns: repeat(auto-fit, minmax(24.3rem, 1fr));
+        // margin-top: 6.6rem;
+        // max-height: 40rem;
+        // // display: flex;
+        // // flex-direction: row;
+        // // justify-content: space-between;
+        // display: grid;
+        // // margin-left: 2.5rem;
+        // justify-content: space-around;
+        // grid-template-columns: repeat(auto-fit, minmax(24.3rem, 1fr));
     }
 
     .products__last-row {
 
-        // justify-content: space-between;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(24.3rem, 1fr));
+        // // justify-content: space-between;
+        // display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(24.3rem, 1fr));
     }
 }
 
 
+.image1 {
+    // grid-area: 1;
+    order: 1;
+}
 
+.image2 {
+    // grid-area: 2;
+    order: 2; 
+}
+
+.image3 {
+    // grid-area: 3;
+    order: 3;
+}
+
+.image4 {
+    // grid-area: 4;
+    order: 9;
+}
+
+.image5 {
+    // grid-area: 5;
+    order: 5;
+}
+
+.image6 {
+    // grid-area: 6;
+    order: 6;
+}
+
+.image7 {
+    // grid-area: 7;
+    order: 7;
+}
+
+.image8 {
+    // grid-area: 8;
+    order: 9;
+}
+
+.image9 {
+    // grid-area: 9;
+    order: 8;
+}
 
 .product__item {
     display: grid;
@@ -259,12 +324,11 @@ ul {
 
 .pages {
     display: flex;
-    margin: 0 auto;
+    margin: 2.5rem auto;
     justify-content: center;
     align-items: center;
     font-family: 'Work Sans';
     flex-direction: column;
-    margin-top: 7.5rem;
     .pages__cont p {
         font-size: 1.8rem;
         color: #151c22;
@@ -279,7 +343,7 @@ ul {
 
     .pages__btn {
         background-color: #151c22;
-        margin-top: 5rem;
+        margin-top: 3rem;
         width: 20rem;
         height: 6.4rem;
         text-align: center;
@@ -344,3 +408,56 @@ ul {
         }
     }
 }
+
+.main768 {
+    display: none;
+}
+
+//MEDIA QUERIES
+
+@media screen and (max-width: 1366px) {
+
+    .pust__2 {
+        display: none;
+    }
+    .main1366 {
+        display: none;
+    }
+    .main768 {
+        display: block;
+    }
+    .pust__4 {
+        display: none;
+    }
+
+    .goods {
+        // max-width: 100%;
+
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr !important;
+        grid-template-rows: 1fr 1fr 1fr 1fr  !important;
+        grid-template-areas: "1  2  3 " "3  9  9 " "4  9  9 " "5  6  7 " !important;
+        
+        .image6 {
+            order: 9;
+        }
+
+        .image9 {
+            order: 6;
+        }
+          
+        .pages {
+            margin: 6rem auto;
+        }
+        // grid-template-columns: repeat(3, minmax(20.6rem,1fr)) !important;
+        // // display: flex;
+        // // justify-content: space-between;
+        // .col-sp {
+        //     grid-column: span 2/auto !important;
+        //     grid-row: span 2/auto !important;
+        // }
+        // .row-sp{grid-row: span 2 / auto !important;}
+    }
+}
+

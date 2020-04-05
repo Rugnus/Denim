@@ -69,6 +69,10 @@ a {
         margin-top: 4.5rem;
         justify-self: left;
         ul{
+            .fa-long-arrow-alt-down {
+                position: absolute;
+                margin-top: 40rem;
+            }
             list-style: none;
             font-family: "Work Sans";
             font-size: 16px;
@@ -76,6 +80,7 @@ a {
             li{
                 margin-bottom: 2.9rem;
             }
+            
             a{
                 color: #151c22 ;
             }
@@ -149,6 +154,14 @@ a {
 
     .fas.fa-search {
         cursor: pointer;
+    }
+
+    .fasr {
+        display: none;
+    }
+
+    .icon768 {
+        display: none;
     }
 
     .header__social-media {
@@ -263,69 +276,7 @@ a {
 
         
 
-        .bestsellers__fall {
-            max-width: 117rem;
-            margin-top: 12.8rem;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            .bestsellers__fall_title {
-                position: relative;
-                max-width: 47rem;
-                height: 37rem;
-                background: url('../img/bestsellers/diag3.jpg') center no-repeat;
-                background-size: cover;
-                display: flex;
-                // justify-content: center;
-                .title {
-                    // margin: 0 auto;
-                    position: relative;
-                    width: 40rem;
-                    height: 30.8rem;
-                    display: flex;
-                    flex-direction: column;
-                    align-self: center;
-                    .title_pos {
-                        margin: 0 auto;
-                    }
-                    .fall__btn {
-                        cursor: pointer;
-                        display: flex;
-                        justify-content: center;
-                        margin-top: 4.9rem;
-                        a{
-                            color: #ffffff;
-                            align-self: center;
-                            font-family: "Work Sans";
-                            font-size: 16px;
-                            font-weight: 700;
-                        }
-                        width: 200px;
-                        height: 64px;
-                        background-color: #151c22;
-                    }
-                    align-self: center;
-                    width: 400px;
-                    height: 308px;
-                    background-color: #f1f2f4;
-                    h6 {    
-                        margin-top: 6.5rem;
-                        color: #727a82;
-                        font-family: "Work Sans";
-                        font-size: 1.8rem;
-                        font-weight: 400;
-                    }
-                    h3 {
-                        margin-top: 1.1rem;
-                        color: #151c22;
-                        font-family: "Work Sans";
-                        font-size: 3.2rem;
-                        font-weight: 700;
-                    }
-
-                }
-            }
-        }
+        
     }
 
     // CATEGORY SECTION
@@ -336,6 +287,7 @@ a {
         .category__title {
             position: relative;
             display: flex;
+            flex-wrap: wrap-reverse;
             flex-direction: row;
             justify-content: space-between;
         }
@@ -377,6 +329,71 @@ a {
                     font-weight: 500;
                     margin-top: 2rem;
                 }
+            }
+        }
+    }
+
+    .bestsellers__fall {
+        max-width: 117rem;
+        // margin-top: 20.8rem;
+        display: flex;
+        margin: 0 auto;
+        flex-direction: row;
+        align-items: center;
+        .bestsellers__fall_title {
+            position: relative;
+            max-width: 47rem;
+            height: 37rem;
+            background: url('../img/bestsellers/diag3.jpg') center no-repeat;
+            background-size: cover;
+            display: flex;
+            // justify-content: center;
+            .title {
+                // margin: 0 auto;
+                position: relative;
+                width: 40rem;
+                height: 30.8rem;
+                display: flex;
+                flex-direction: column;
+                align-self: center;
+                .title_pos {
+                    margin: 0 auto;
+                }
+                .fall__btn {
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 4.9rem;
+                    a{
+                        color: #ffffff;
+                        align-self: center;
+                        font-family: "Work Sans";
+                        font-size: 16px;
+                        font-weight: 700;
+                    }
+                    width: 200px;
+                    height: 64px;
+                    background-color: #151c22;
+                }
+                align-self: center;
+                width: 400px;
+                height: 308px;
+                background-color: #f1f2f4;
+                h6 {    
+                    margin-top: 6.5rem;
+                    color: #727a82;
+                    font-family: "Work Sans";
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                }
+                h3 {
+                    margin-top: 1.1rem;
+                    color: #151c22;
+                    font-family: "Work Sans";
+                    font-size: 3.2rem;
+                    font-weight: 700;
+                }
+
             }
         }
     }
@@ -441,9 +458,16 @@ a {
     display: none;
 }
 
+.menu_768px {
+    display: none;
+}
+
+.header__sm768 {
+    display: none;
+}
 // MEDIA QUERIES
 
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1366px) {
     //HEADER
     .header__title {
         position: absolute;
@@ -469,12 +493,40 @@ a {
         margin-top: 35rem;
     }
 
+    .header__right {
+        display: none;
+    }
+
+    .menu_768px {
+        // margin-left: 40rem;
+        display: block;
+        .fa-search {
+            margin-left: 2rem;
+        }
+    }
+
     .nav-list {
-        ul {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        ul.first-menu {
+            width: 25rem;
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-between;
         }
+        .fa-long-arrow-alt-down {
+            display: none;
+        }
+    }
+
+    .fast {
+        display: block;
+    }
+
+    .fa-shopping-cart {
+        margin-bottom: 0;
     }
 
     .main_image_1366 {
@@ -483,11 +535,62 @@ a {
 
     .main_image_768 {
         display: block;
-        margin-top: 8.3rem;
+        margin-left: 10.7rem;
+    }
+    
+    .icon768 {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        font-size: 1.4rem;
+        margin-bottom: 3.5rem;
     }
 
-    // FALL SECT
+    .header__sm768 {
+        max-width: 90%;
+        display: flex;
+        flex-direction: row;
+        margin-left:45rem;
+        justify-content: space-between;
+        // justify-self: flex-end;
+        color: #151c22;
+        font-family: "Work Sans";
+        font-size: 14px;
+        font-weight: 500;
+        p:first-child {
+            transition: all 500ms;
+        }
+        p:first-child:hover {
+            color: rgb(54, 19, 211);
+        }
+        p:last-child {
+            margin-left: 2.5rem;
+            transition: all 500ms;
+        }
+        p:last-child:hover {
+            color: #e27bd4;
+        }
+        .header__sm768_cont {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;   
+            width: 20rem;
+        }
+        
+        width: 10rem;
+        margin-top: 7rem;
+        justify-content: space-between;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 1100px) {
+    
     .bestsellers__fall_title {
+        margin-top: 10rem;
         width: 100%;
         background: url('../img/bestsellers/diag768.jpg') center !important;
         // background-size: cover;
@@ -496,7 +599,6 @@ a {
             width: 30rem !important;
         }
     }
-
     .fallimg {
         display: none !important;
     }
