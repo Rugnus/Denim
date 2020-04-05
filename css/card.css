@@ -471,11 +471,16 @@ ul {
     flex-basis: 15.1rem;
   }
 
+  .like__items {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-gap: 1rem !important;
+  }
+
   .like__title p {
     display: none !important;
   }
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 767px) and (max-width: 680px) {
   .footer .footer_info1 {
     padding-top: 2rem;
   }
@@ -489,7 +494,7 @@ ul {
   .footer .footer__main-info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 6rem;
+    grid-gap: 1rem;
   }
   .footer h3 {
     margin-left: 1.5rem;

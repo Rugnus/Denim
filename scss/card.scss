@@ -526,12 +526,17 @@ ul {
         flex-basis: 15.1rem;
     }
 
+    .like__items {
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-gap: 1rem !important;
+    }
+
     .like__title {
         p {
             display: none !important;
         }
     }
-}
+
 
 @media screen and (max-width: 680px) {
     .footer {
@@ -549,10 +554,11 @@ ul {
         .footer__main-info {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                grid-gap: 6rem;
+                grid-gap: 1rem;
         }
         h3 {
             margin-left: 1.5rem;
         }
     }
+}
 }
